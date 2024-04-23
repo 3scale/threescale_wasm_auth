@@ -47,7 +47,7 @@ serde_json = { version = "^1" }
 serde_yaml = { version = "^0.9", optional = true }
 rand = { version = "^0.8", default-features = false }
 rand_seeder = { version = "^0.2" }
-rand_jitter = { version = "^0.3" }
+rand_jitter = { version = "^0.4" }
 # PRNG implementation
 rand_xoshiro = { version = "^0.6", optional = true }
 rand_xorshift = { version = "^0.3", optional = true }

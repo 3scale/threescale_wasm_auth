@@ -37,7 +37,7 @@ where
         Err(e) => {
             match e {
                 rand_jitter::TimerError::CoarseTimer => {
-                    log::error!(
+                    log::warn!(
                         "{}: JitterRng: timer source is coarse, seed quality will be reduced",
                         context_id
                     );

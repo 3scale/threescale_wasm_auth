@@ -16,6 +16,11 @@ jobs:
   build:
     name: Build and push image
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - arch: s390x
+            distro: ubuntu22.04
     steps:
       - name: Check out code
         uses: actions/checkout@v3

@@ -4,7 +4,7 @@ DOCKER ?= podman
 
 .PHONY: build
 build:
-	$(DOCKER) build -t quay.io/3scale/threescale-wasm-auth:$(IMAGE_VERSION) -f $(PROJECT_PATH)/Dockerfile $(PROJECT_PATH)
+	$(DOCKER) build -t quay.io/3scale/threescale-wasm-auth:$(IMAGE_VERSION) -f Dockerfile $(PROJECT_PATH)
 
 .PHONY: clean
 clean:

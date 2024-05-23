@@ -16,17 +16,17 @@ release-extension: ## Build a release WASM filter and docker image
 .PHONY: build-extension
 build-extension: export IMAGE_VERSION?=latest
 build-extension: build ## Build WASM filter and docker image
-	$(MAKE) -C $(PROJECT_PATH)/servicemesh build
+	$(MAKE) -C $(PROJECT_PATH)/container build
 
 .PHONY: clean-extension
 clean-extension: export IMAGE_VERSION?=latest
 clean-extension: clean ## Clean WASM filter and docker image
-	$(MAKE) -C $(PROJECT_PATH)/servicemesh clean
+	$(MAKE) -C $(PROJECT_PATH)/container clean
 
 .PHONY: push-extension
 push-extension: export IMAGE_VERSION?=latest
 push-extension: ## Push WASM filter docker image
-	$(MAKE) -C $(PROJECT_PATH)/servicemesh push
+	$(MAKE) -C $(PROJECT_PATH)/container push
 
 .PHONY: with-container-do
 with-container-do:
